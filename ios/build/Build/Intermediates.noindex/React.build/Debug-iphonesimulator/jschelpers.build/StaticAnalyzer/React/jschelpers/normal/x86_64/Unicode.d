@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/ReactCommon/jschelpers/Unicode.h

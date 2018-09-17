@@ -1,2 +1,2 @@
-dependencies: /Users/pro/Documents/workspace/DogSay/ios/DogSay/main.m \
-  /Users/pro/Documents/workspace/DogSay/ios/DogSay/AppDelegate.h
+dependencies: /Users/abc/workspace/curly-goggles/ios/DogSay/main.m \
+  /Users/abc/workspace/curly-goggles/ios/DogSay/AppDelegate.h

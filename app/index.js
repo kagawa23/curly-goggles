@@ -1,6 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View, TabBarIOS } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import Creation from "./creation";
+import Account from "./account";
+import Edit from "./edit";
 
 export default class App extends React.Component {
   constructor() {
@@ -14,7 +17,7 @@ export default class App extends React.Component {
     return (
       <TabBarIOS tintColor="#ee753c">
         <Icon.TabBarItemIOS
-          iconName="ios-videocam-outline"
+          iconName="md-videocam"
           selectedIconName="ios-videocam"
           iconSize={20}
           onPress={() =>
@@ -25,10 +28,10 @@ export default class App extends React.Component {
           selected={selectTab === "list"}
           title={"List"}
         >
-          <View>List</View>
+          <Creation />
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
-          iconName="ios-recording-outline"
+          iconName="md-recording"
           selectedIconName="ios-recording"
           iconSize={20}
           onPress={() => {
@@ -37,10 +40,10 @@ export default class App extends React.Component {
           selected={selectTab === "edit"}
           title={"Edit"}
         >
-          <View>Edit</View>
+          <Edit />
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
-          iconName="ios-more-outline"
+          iconName="md-more"
           selectedIconName="ios-more"
           iconSize={20}
           onPress={() => {
@@ -49,7 +52,7 @@ export default class App extends React.Component {
           selected={selectTab === "account"}
           title={"Account"}
         >
-          <View>Account</View>
+          <Account />
         </Icon.TabBarItemIOS>
       </TabBarIOS>
     );

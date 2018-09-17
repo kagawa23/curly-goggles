@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTManagedPointer.mm \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTManagedPointer.h
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTManagedPointer.mm \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTManagedPointer.h

@@ -1,12 +1,12 @@
 dependencies: \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Inspector/RCTInspector.mm \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Inspector/RCTInspector.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/jsinspector/InspectorInterfaces.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Inspector/RCTInspector.mm \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Inspector/RCTInspector.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/jsinspector/InspectorInterfaces.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h

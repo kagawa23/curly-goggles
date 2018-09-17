@@ -1,12 +1,11 @@
-dependencies: \
-  /Users/pro/Documents/workspace/DogSay/ios/DogSay/AppDelegate.m \
-  /Users/pro/Documents/workspace/DogSay/ios/DogSay/AppDelegate.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+dependencies: /Users/abc/workspace/curly-goggles/ios/DogSay/AppDelegate.m \
+  /Users/abc/workspace/curly-goggles/ios/DogSay/AppDelegate.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

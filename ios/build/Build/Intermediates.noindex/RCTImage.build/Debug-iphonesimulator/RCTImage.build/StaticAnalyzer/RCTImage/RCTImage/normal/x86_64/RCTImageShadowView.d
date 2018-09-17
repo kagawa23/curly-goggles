@@ -1,20 +1,20 @@
 dependencies: \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/Libraries/Image/RCTImageShadowView.m \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/pro/Documents/workspace/DogSay/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/Libraries/Image/RCTImageShadowView.m \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/abc/workspace/curly-goggles/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h

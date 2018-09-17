@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/ReactCommon/privatedata/PrivateDataBase.cpp \
-  /Users/pro/Documents/workspace/DogSay/node_modules/react-native/ReactCommon/privatedata/PrivateDataBase.h
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/ReactCommon/privatedata/PrivateDataBase.cpp \
+  /Users/abc/workspace/curly-goggles/node_modules/react-native/ReactCommon/privatedata/PrivateDataBase.h
