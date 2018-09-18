@@ -9,6 +9,7 @@ import {
   Dimensions
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import Mock from "mockjs";
 
 const width = Dimensions.get("window").width;
 const data = [
@@ -112,7 +113,7 @@ class List extends PureComponent {
     console.log("hello");
     try {
       let response = await fetch(
-        "https://rap2api.taobao.org/app/mock/85415/api/creation",
+        "http://rap2api.taobao.org/app/mock/template/433529",
         {
           headers: {
             "content-type": "application/json"
@@ -120,7 +121,9 @@ class List extends PureComponent {
         }
       );
       let responseJson = await response.json();
+      const data = Mock.mock(responseJson);
       console.log(responseJson);
+      console.log(data);
       return responseJson.movies;
     } catch (error) {
       console.log(error);
@@ -136,18 +139,17 @@ class List extends PureComponent {
   }
 
   async componentDidMount() {
-    // this._getListData().done();
-
-    try {
-      let response = await fetch(
-        "http://rap2api.taobao.org/app/mock/template/433529"
-      );
-      let responseJson = await response.json();
-      console.log(responseJson);
-      return responseJson.movies;
-    } catch (error) {
-      console.log(error);
-    }
+    this._getListData().done();
+    // try {
+    //   let response = await fetch(
+    //     "http://rap2api.taobao.org/app/mock/template/433529"
+    //   );
+    //   let responseJson = await response.json();
+    //   console.log(responseJson);
+    //   return responseJson.movies;
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
 
   render() {
