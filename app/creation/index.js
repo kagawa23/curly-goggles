@@ -100,7 +100,58 @@ class ListItem extends PureComponent {
 }
 
 class List extends PureComponent {
+  constructor() {
+    super();
+    this.state = {
+      data: data
+    };
+    this._getListData = this._getListData.bind(this);
+  }
+
+  async _getListData() {
+    console.log("hello");
+    try {
+      let response = await fetch(
+        "https://rap2api.taobao.org/app/mock/85415/api/creation",
+        {
+          headers: {
+            "content-type": "application/json"
+          }
+        }
+      );
+      let responseJson = await response.json();
+      console.log(responseJson);
+      return responseJson.movies;
+    } catch (error) {
+      console.log(error);
+    }
+    // return fetch("https://rap2api.taobao.org/app/mock/85415/api/creation")
+    //   .then(response => response.json())
+    //   .then(responseJson => {
+    //     return responseJson.movies;
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
+  }
+
+  async componentDidMount() {
+    // this._getListData().done();
+
+    try {
+      let response = await fetch(
+        "http://rap2api.taobao.org/app/mock/template/433529"
+      );
+      let responseJson = await response.json();
+      console.log(responseJson);
+      return responseJson.movies;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   render() {
+    const { data } = this.state;
     return (
       <View style={styles.container}>
         <Text style={styles.header}>列表页面</Text>
@@ -122,7 +173,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     paddingTop: 25,
-    flex: 1
+    flex: 1,
+    marginBottom: 10
   },
   header: {
     textAlign: "center",
@@ -151,23 +203,21 @@ const styles = StyleSheet.create({
     width: 0.5 * width - 0.5,
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "row"
+    flexDirection: "row",
+    paddingTop: 10,
+    paddingBottom: 10
   },
   play: {
     position: "absolute",
     bottom: 10,
     right: 10,
-    // paddingLeft: 9,
     width: 46,
     height: 46,
-    // paddingLeft: 9,
-    // paddingTop: 9,
     borderRadius: 23,
     borderWidth: 1,
     borderColor: "#fff",
     color: "red",
     textAlign: "center",
-    //verticalAlign: "center"
     lineHeight: 46
   }
 });
