@@ -5,7 +5,7 @@ class Index extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
-        <Text>账户页面</Text>
+        <Text>账户面面</Text>
       </View>
     );
   }

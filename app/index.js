@@ -2,8 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View, TabBarIOS } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import Creation from "./creation";
+import Detail from "./creation/detail";
 import Account from "./account";
 import Edit from "./edit";
+import { createStackNavigator } from "react-navigation";
 
 export default class App extends React.Component {
   constructor() {
@@ -14,6 +16,10 @@ export default class App extends React.Component {
   }
   render() {
     const { selectTab } = this.state;
+    const ListNavigator = createStackNavigator(
+      { Creation, Detail },
+      { initialRouteName: "Creation" }
+    );
     return (
       <TabBarIOS tintColor="#ee753c">
         <Icon.TabBarItemIOS
@@ -28,7 +34,7 @@ export default class App extends React.Component {
           selected={selectTab === "list"}
           title={"List"}
         >
-          <Creation />
+          <ListNavigator />
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
           iconName="md-recording"
