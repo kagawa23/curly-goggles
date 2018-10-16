@@ -117,7 +117,6 @@ class List extends PureComponent {
       accessToken: "12345",
       page
     });
-    // console.log(data);
 
     if (success) {
       this.currentList = {
@@ -125,9 +124,10 @@ class List extends PureComponent {
         data: _data.concat(data),
         total
       };
-      this.setState({ data: this.currentList.data, isLoading: false });
+      this._mounted &&
+        this.setState({ data: this.currentList.data, isLoading: false });
     } else {
-      this.setState({ isLoading: false });
+      this._mounted && this.setState({ isLoading: false });
     }
   }
   _getMore() {
@@ -155,7 +155,12 @@ class List extends PureComponent {
   }
 
   componentDidMount() {
+    this._mounted = true;
     this._getListData();
+  }
+
+  componentWillUnmount() {
+    this._mounted = false;
   }
 
   render() {
