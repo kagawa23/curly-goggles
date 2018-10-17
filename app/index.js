@@ -17,7 +17,16 @@ export default class App extends React.Component {
   render() {
     const { selectTab } = this.state;
     const ListNavigator = createStackNavigator(
-      { Creation, Detail },
+      {
+        Creation,
+        Detail: {
+          screen: Detail,
+          navigationOptions: ({ navigation }) => ({
+            title: "视频详情"
+            // headerBackTitle: "返回"
+          })
+        }
+      },
       { initialRouteName: "Creation" }
     );
     return (

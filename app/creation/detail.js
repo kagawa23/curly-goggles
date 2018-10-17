@@ -29,7 +29,6 @@ class Detail extends PureComponent {
     const video = navigation.getParam("video", "");
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>视屏</Text>
         <Video
           source={{ uri: video }} // Can be a URL or a local file.
           ref={ref => {
