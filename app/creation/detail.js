@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator, Image } from "react-native";
 import Video from "react-native-video";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -34,6 +34,10 @@ class Detail extends PureComponent {
     const { navigation } = this.props;
     const { loading, paused } = this.state;
     const video = navigation.getParam("video", "");
+    const author = navigation.getParam("author", {});
+    const title = navigation.getParam("title", "");
+    const { avatar, nickname } = author;
+    console.log(author);
     return (
       <View style={styles.container}>
         <View style={styles.videoGroup}>
@@ -74,12 +78,38 @@ class Detail extends PureComponent {
             />
           )}
         </View>
+        <View style={styles.author}>
+          <Image source={{ uri: avatar }} style={styles.avatar} />
+          <View style={styles.infoGroup}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.nickname}>{nickname}</Text>
+          </View>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  author: {
+    //  flex: 1,
+    flexDirection: "row",
+    margin: 10
+  },
+  avatar: {
+    height: 64,
+    width: 64,
+    borderRadius: 32
+  },
+  infoGroup: {
+    flex: 1,
+    marginLeft: 10,
+    justifyContent: "space-between"
+  },
+  title: {},
+  nickname: {
+    fontWeight: "200"
+  },
   container: {
     backgroundColor: "#fff",
     flex: 1
