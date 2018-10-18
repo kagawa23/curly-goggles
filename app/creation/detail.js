@@ -1,11 +1,16 @@
 import React, { PureComponent } from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import Video from "react-native-video";
+import Icon from "react-native-vector-icons/Ionicons";
 
 class Detail extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loading: true,
+      paused: false
+    };
+    this._onProgress = this._onProgress.bind(this);
   }
 
   _onLoadStart() {
@@ -15,6 +20,7 @@ class Detail extends PureComponent {
     console.log("load");
   }
   _onProgress(data) {
+    this.setState(state => ({ ...state, loading: false }));
     console.log(data);
   }
   _onEnd() {
@@ -26,28 +32,48 @@ class Detail extends PureComponent {
   }
   render() {
     const { navigation } = this.props;
+    const { loading, paused } = this.state;
     const video = navigation.getParam("video", "");
     return (
       <View style={styles.container}>
-        <Video
-          source={{ uri: video }} // Can be a URL or a local file.
-          ref={ref => {
-            this.player = ref;
-          }} // Store reference
-          style={styles.backgroundVideo}
-          volumn={5}
-          // paused={this.state.paused}
-          // rate={this.state.rate}
-          // muted={this.state.muted}
-          // resizeMode={this.state.resizeMode}
-          // repeat={this.state.repeat}
-          onLoadStart={this._onLoadStart}
-          onLoad={this._onLoad}
-          onProgress={this._onProgress}
-          onEnd={this._onEnd}
-          onError={this._onError}
-        />
-        <ActivityIndicator color="#ee735c" style={styles.loading} />
+        <View style={styles.videoGroup}>
+          <Video
+            source={{ uri: video }} // Can be a URL or a local file.
+            ref={ref => {
+              this.player = ref;
+            }} // Store reference
+            style={styles.backgroundVideo}
+            volumn={5}
+            paused={paused}
+            // rate={this.state.rate}
+            // muted={this.state.muted}
+            // resizeMode={this.state.resizeMode}
+            // repeat={this.state.repeat}
+            onLoadStart={this._onLoadStart}
+            onLoad={this._onLoad}
+            onProgress={this._onProgress}
+            onEnd={this._onEnd}
+            onError={this._onError}
+          />
+          {loading ? (
+            <ActivityIndicator color="#ee735c" style={styles.loading} />
+          ) : null}
+          {paused ? (
+            <Icon
+              name="ios-play"
+              size={28}
+              style={styles.play}
+              onPress={() => this.setState({ paused: false })}
+            />
+          ) : (
+            <Icon
+              name="ios-pause"
+              size={28}
+              style={styles.paused}
+              onPress={() => this.setState({ paused: true })}
+            />
+          )}
+        </View>
       </View>
     );
   }
@@ -56,24 +82,55 @@ class Detail extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    paddingTop: 25,
-    flex: 1,
-    marginBottom: 10
+    flex: 1
   },
   header: {
     textAlign: "center"
+  },
+  videoGroup: {
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    height: "35%",
+    justifyContent: "center"
   },
   backgroundVideo: {
     position: "absolute",
     top: 0,
     left: 0,
-    bottom: 0,
-    right: 0
+    right: 0,
+    bottom: 0
   },
   loading: {
+    alignSelf: "center"
+  },
+  paused: {
     position: "absolute",
-    top: "50%",
-    left: "50%"
+    bottom: 10,
+    right: 10,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    borderWidth: 1,
+    borderColor: "#fff",
+    textAlign: "center",
+    lineHeight: 46,
+    color: "#fff"
+    // alignSelf: "center"
+  },
+  play: {
+    position: "absolute",
+    bottom: 10,
+    right: 10,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    borderWidth: 1,
+    borderColor: "#fff",
+    textAlign: "center",
+    lineHeight: 46,
+    color: "#fff"
   }
 });
 
