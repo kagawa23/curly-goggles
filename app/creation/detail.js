@@ -1,16 +1,30 @@
 import React, { PureComponent } from "react";
-import { StyleSheet, Text, View, ActivityIndicator, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicator,
+  Image,
+  FlatList
+} from "react-native";
 import Video from "react-native-video";
 import Icon from "react-native-vector-icons/Ionicons";
+import { get, post } from "../common/request";
+import { api } from "../common";
 
 class Detail extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
-      paused: false
+      paused: false,
+
+      //
+      comments: [],
+      page: 0
     };
     this._onProgress = this._onProgress.bind(this);
+    this._renderHeader = this._renderHeader.bind(this);
   }
 
   _onLoadStart() {
@@ -21,7 +35,7 @@ class Detail extends PureComponent {
   }
   _onProgress(data) {
     this.setState(state => ({ ...state, loading: false }));
-    console.log(data);
+    // console.log(data);
   }
   _onEnd() {
     console.log("end");
@@ -30,12 +44,72 @@ class Detail extends PureComponent {
     console.log(err);
     console.log("error");
   }
-  render() {
+  async _getComments(creation, page = 0) {
+    const { success, data: comments, total } = await get(
+      `${api.host}${api.comments}`,
+      {
+        accessToken: "12345",
+        creation,
+        page
+      }
+    );
+    if (success) {
+      return { comments, total };
+    }
+  }
+  _renderItem({ item }) {
+    console.log(item);
+    const {
+      author: { avatar, nickname },
+      title
+    } = item;
+    return (
+      <View style={styles.author}>
+        <Image source={{ uri: avatar }} style={styles.avatar} />
+        <View style={[styles.infoGroup, styles.commentInfo]}>
+          <Text style={styles.nickname}>{nickname}</Text>
+          <Text style={styles.title}>{title}</Text>
+        </View>
+      </View>
+    );
+  }
+  _renderHeader() {
     const { navigation } = this.props;
-    const { loading, paused } = this.state;
-    const video = navigation.getParam("video", "");
     const author = navigation.getParam("author", {});
     const title = navigation.getParam("title", "");
+
+    const { avatar, nickname } = author;
+    return (
+      <View>
+        <View style={styles.author}>
+          <Image source={{ uri: avatar }} style={styles.avatar} />
+          <View style={styles.infoGroup}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.nickname}>{nickname}</Text>
+          </View>
+        </View>
+        <View style={styles.commentTitle}>
+          <Text style={styles.description}>全部回复</Text>
+        </View>
+      </View>
+    );
+  }
+  async componentDidMount() {
+    const { navigation } = this.props;
+    const id = navigation.getParam("id", "");
+    const { comments } = await this._getComments(id);
+    console.log(comments);
+    this.setState(state => ({
+      comments,
+      page: state.page + 1
+    }));
+  }
+  render() {
+    const { navigation } = this.props;
+    const { loading, paused, comments } = this.state;
+    const video = navigation.getParam("video", "");
+    const author = navigation.getParam("author", {});
+
     const { avatar, nickname } = author;
     console.log(author);
     return (
@@ -78,13 +152,13 @@ class Detail extends PureComponent {
             />
           )}
         </View>
-        <View style={styles.author}>
-          <Image source={{ uri: avatar }} style={styles.avatar} />
-          <View style={styles.infoGroup}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.nickname}>{nickname}</Text>
-          </View>
-        </View>
+        <FlatList
+          data={comments}
+          // extraData={this.state}
+          // keyExtractor={this._keyExtractor}
+          renderItem={this._renderItem}
+          ListHeaderComponent={this._renderHeader}
+        />
       </View>
     );
   }
@@ -92,7 +166,6 @@ class Detail extends PureComponent {
 
 const styles = StyleSheet.create({
   author: {
-    //  flex: 1,
     flexDirection: "row",
     margin: 10
   },
@@ -109,6 +182,9 @@ const styles = StyleSheet.create({
   title: {},
   nickname: {
     fontWeight: "200"
+  },
+  commentInfo: {
+    padding: 10
   },
   container: {
     backgroundColor: "#fff",

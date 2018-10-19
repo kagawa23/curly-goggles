@@ -9,5 +9,6 @@ export const options = {
 export const api = {
   host: "http://rap2api.taobao.org/app/mock/85415/",
   creation: "api/creation",
-  up: "api/up"
+  up: "api/up",
+  comments: "api/comments"
 };
